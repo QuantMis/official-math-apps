@@ -14,8 +14,16 @@ struct ContentView: View {
                 .tabItem {
                     Label("Exercise", systemImage: "target")
                 }
-           
-        }
+                
+            HistoryView()
+                .tabItem {
+                    Label("History", systemImage: "archivebox.fill")
+                }
+            SettingView()
+                .tabItem {
+                    Label("Setting", systemImage: "gear")
+                }
+        }.accentColor(.green)
         
     }
 }

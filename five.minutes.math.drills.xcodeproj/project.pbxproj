@@ -7,20 +7,54 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF1700212B2991590033EE36 /* SessionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1700202B2991590033EE36 /* SessionDetailView.swift */; };
+		AF1700232B29B39E0033EE36 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1700222B29B39E0033EE36 /* HistoryView.swift */; };
+		AF1700252B29BDFF0033EE36 /* Sessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1700242B29BDFF0033EE36 /* Sessions.swift */; };
+		AF59B8612B31E16A007F8A5E /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59B8602B31E16A007F8A5E /* SettingView.swift */; };
+		AF958C922B23719500517454 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF958C912B23719500517454 /* Utils.swift */; };
 		AF980A5A2B0FA9EE00AA71E4 /* five_minutes_math_drillsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF980A592B0FA9EE00AA71E4 /* five_minutes_math_drillsApp.swift */; };
 		AF980A5C2B0FA9EE00AA71E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF980A5B2B0FA9EE00AA71E4 /* ContentView.swift */; };
 		AF980A5E2B0FA9EF00AA71E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF980A5D2B0FA9EF00AA71E4 /* Assets.xcassets */; };
 		AF980A612B0FA9EF00AA71E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF980A602B0FA9EF00AA71E4 /* Preview Assets.xcassets */; };
 		AF980A692B0FAA9A00AA71E4 /* DrillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF980A682B0FAA9A00AA71E4 /* DrillView.swift */; };
+		AFB271092B108E4900A1234A /* DrillSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB271082B108E4900A1234A /* DrillSessionView.swift */; };
+		AFB2710C2B1096D400A1234A /* NavigationPathState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2710B2B1096D400A1234A /* NavigationPathState.swift */; };
+		AFB271102B10AB9300A1234A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2710F2B10AB9300A1234A /* LoadingView.swift */; };
+		AFB271122B10FDB700A1234A /* DrillSessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB271112B10FDB700A1234A /* DrillSessionState.swift */; };
+		AFB271152B11011E00A1234A /* QuestionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB271142B11011E00A1234A /* QuestionGenerator.swift */; };
+		AFB271172B11012A00A1234A /* AnswerGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB271162B11012A00A1234A /* AnswerGenerator.swift */; };
+		AFD62CB12B1C864100A9339C /* 5minmath.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFD62CAF2B1C864100A9339C /* 5minmath.xcdatamodeld */; };
+		AFDDABA92B1F7D3C00BF1575 /* Sessions+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDABA52B1F7D3C00BF1575 /* Sessions+CoreDataClass.swift */; };
+		AFDDABAA2B1F7D3C00BF1575 /* Sessions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDABA62B1F7D3C00BF1575 /* Sessions+CoreDataProperties.swift */; };
+		AFDDABAB2B1F7D3C00BF1575 /* Questions+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDABA72B1F7D3C00BF1575 /* Questions+CoreDataClass.swift */; };
+		AFDDABAC2B1F7D3C00BF1575 /* Questions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDABA82B1F7D3C00BF1575 /* Questions+CoreDataProperties.swift */; };
+		AFDDABAE2B1F7E5800BF1575 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDDABAD2B1F7E5800BF1575 /* CoreDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF1700202B2991590033EE36 /* SessionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDetailView.swift; sourceTree = "<group>"; };
+		AF1700222B29B39E0033EE36 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		AF1700242B29BDFF0033EE36 /* Sessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sessions.swift; sourceTree = "<group>"; };
+		AF59B8602B31E16A007F8A5E /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		AF958C912B23719500517454 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		AF980A562B0FA9EE00AA71E4 /* five.minutes.math.drills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = five.minutes.math.drills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF980A592B0FA9EE00AA71E4 /* five_minutes_math_drillsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = five_minutes_math_drillsApp.swift; sourceTree = "<group>"; };
 		AF980A5B2B0FA9EE00AA71E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF980A5D2B0FA9EF00AA71E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF980A602B0FA9EF00AA71E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF980A682B0FAA9A00AA71E4 /* DrillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillView.swift; sourceTree = "<group>"; };
+		AFB271082B108E4900A1234A /* DrillSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillSessionView.swift; sourceTree = "<group>"; };
+		AFB2710B2B1096D400A1234A /* NavigationPathState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPathState.swift; sourceTree = "<group>"; };
+		AFB2710F2B10AB9300A1234A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		AFB271112B10FDB700A1234A /* DrillSessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrillSessionState.swift; sourceTree = "<group>"; };
+		AFB271142B11011E00A1234A /* QuestionGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGenerator.swift; sourceTree = "<group>"; };
+		AFB271162B11012A00A1234A /* AnswerGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerGenerator.swift; sourceTree = "<group>"; };
+		AFD62CB02B1C864100A9339C /* 5minmath.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = 5minmath.xcdatamodel; sourceTree = "<group>"; };
+		AFDDABA52B1F7D3C00BF1575 /* Sessions+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sessions+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AFDDABA62B1F7D3C00BF1575 /* Sessions+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sessions+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AFDDABA72B1F7D3C00BF1575 /* Questions+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questions+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AFDDABA82B1F7D3C00BF1575 /* Questions+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Questions+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AFDDABAD2B1F7E5800BF1575 /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,9 +68,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF958C902B23718000517454 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AF958C912B23719500517454 /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		AF980A4D2B0FA9EE00AA71E4 = {
 			isa = PBXGroup;
 			children = (
+				AFDDABA52B1F7D3C00BF1575 /* Sessions+CoreDataClass.swift */,
+				AFDDABA62B1F7D3C00BF1575 /* Sessions+CoreDataProperties.swift */,
+				AFDDABA72B1F7D3C00BF1575 /* Questions+CoreDataClass.swift */,
+				AFDDABA82B1F7D3C00BF1575 /* Questions+CoreDataProperties.swift */,
 				AF980A582B0FA9EE00AA71E4 /* five.minutes.math.drills */,
 				AF980A572B0FA9EE00AA71E4 /* Products */,
 			);
@@ -53,10 +99,16 @@
 		AF980A582B0FA9EE00AA71E4 /* five.minutes.math.drills */ = {
 			isa = PBXGroup;
 			children = (
+				AF958C902B23718000517454 /* Utils */,
+				AFB271182B11013700A1234A /* Models */,
+				AFB271132B11010D00A1234A /* Generator */,
+				AFB2710A2B1095B700A1234A /* State */,
 				AF980A672B0FAA7400AA71E4 /* Views */,
 				AF980A592B0FA9EE00AA71E4 /* five_minutes_math_drillsApp.swift */,
 				AF980A5D2B0FA9EF00AA71E4 /* Assets.xcassets */,
 				AF980A5F2B0FA9EF00AA71E4 /* Preview Content */,
+				AFD62CAF2B1C864100A9339C /* 5minmath.xcdatamodeld */,
+				AFDDABAD2B1F7E5800BF1575 /* CoreDataProvider.swift */,
 			);
 			path = five.minutes.math.drills;
 			sourceTree = "<group>";
@@ -74,8 +126,39 @@
 			children = (
 				AF980A5B2B0FA9EE00AA71E4 /* ContentView.swift */,
 				AF980A682B0FAA9A00AA71E4 /* DrillView.swift */,
+				AFB271082B108E4900A1234A /* DrillSessionView.swift */,
+				AFB2710F2B10AB9300A1234A /* LoadingView.swift */,
+				AF1700202B2991590033EE36 /* SessionDetailView.swift */,
+				AF1700222B29B39E0033EE36 /* HistoryView.swift */,
+				AF59B8602B31E16A007F8A5E /* SettingView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AFB2710A2B1095B700A1234A /* State */ = {
+			isa = PBXGroup;
+			children = (
+				AFB2710B2B1096D400A1234A /* NavigationPathState.swift */,
+				AFB271112B10FDB700A1234A /* DrillSessionState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		AFB271132B11010D00A1234A /* Generator */ = {
+			isa = PBXGroup;
+			children = (
+				AFB271142B11011E00A1234A /* QuestionGenerator.swift */,
+				AFB271162B11012A00A1234A /* AnswerGenerator.swift */,
+			);
+			path = Generator;
+			sourceTree = "<group>";
+		};
+		AFB271182B11013700A1234A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF1700242B29BDFF0033EE36 /* Sessions.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +231,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFD62CB12B1C864100A9339C /* 5minmath.xcdatamodeld in Sources */,
+				AF59B8612B31E16A007F8A5E /* SettingView.swift in Sources */,
 				AF980A5C2B0FA9EE00AA71E4 /* ContentView.swift in Sources */,
+				AF1700252B29BDFF0033EE36 /* Sessions.swift in Sources */,
+				AFB271152B11011E00A1234A /* QuestionGenerator.swift in Sources */,
+				AFB271122B10FDB700A1234A /* DrillSessionState.swift in Sources */,
 				AF980A692B0FAA9A00AA71E4 /* DrillView.swift in Sources */,
+				AFB2710C2B1096D400A1234A /* NavigationPathState.swift in Sources */,
+				AFB271172B11012A00A1234A /* AnswerGenerator.swift in Sources */,
 				AF980A5A2B0FA9EE00AA71E4 /* five_minutes_math_drillsApp.swift in Sources */,
+				AF958C922B23719500517454 /* Utils.swift in Sources */,
+				AF1700212B2991590033EE36 /* SessionDetailView.swift in Sources */,
+				AFDDABAB2B1F7D3C00BF1575 /* Questions+CoreDataClass.swift in Sources */,
+				AF1700232B29B39E0033EE36 /* HistoryView.swift in Sources */,
+				AFB271092B108E4900A1234A /* DrillSessionView.swift in Sources */,
+				AFDDABA92B1F7D3C00BF1575 /* Sessions+CoreDataClass.swift in Sources */,
+				AFDDABAA2B1F7D3C00BF1575 /* Sessions+CoreDataProperties.swift in Sources */,
+				AFDDABAC2B1F7D3C00BF1575 /* Questions+CoreDataProperties.swift in Sources */,
+				AFB271102B10AB9300A1234A /* LoadingView.swift in Sources */,
+				AFDDABAE2B1F7E5800BF1575 /* CoreDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +392,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -321,6 +422,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,6 +458,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AFD62CAF2B1C864100A9339C /* 5minmath.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AFD62CB02B1C864100A9339C /* 5minmath.xcdatamodel */,
+			);
+			currentVersion = AFD62CB02B1C864100A9339C /* 5minmath.xcdatamodel */;
+			path = 5minmath.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AF980A4E2B0FA9EE00AA71E4 /* Project object */;
 }
