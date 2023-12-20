@@ -9,7 +9,11 @@ import SwiftUI
 
 struct SettingView: View {
     @EnvironmentObject var navigationStateManager: NavigationStateManager
-    @State private var scoreTarget:Int = 200;
+    @State private var scoreTarget:Int = 0;
+    @AppStorage("dailyTarget") private var dailyTarget: Int = 0
+    init() {
+      
+    }
     
     var body: some View {
         NavigationStack(path: $navigationStateManager.selectionPath) {
@@ -25,24 +29,28 @@ struct SettingView: View {
                             HStack {
                                 Button(action: {
                                     scoreTarget += 10
+                                    dailyTarget += 10
                                 }) {
-                                    Image(systemName: "plus")
+                                    Image(systemName: "chevron.up")
                                 }
                                 .buttonStyle(.plain)
+                                .contentShape(Rectangle()) // Adjust hit testing area
+
                                 Spacer().frame(width: 10)
+
                                 Divider()
+
                                 Spacer().frame(width: 10)
+
                                 Button(action: {
-                                    scoreTarget = scoreTarget - 10
+                                    scoreTarget -= 10
+                                    dailyTarget -= 10
                                 }) {
-                                    Image(systemName: "minus")
+                                    Image(systemName: "chevron.down")
                                 }
                                 .buttonStyle(.plain)
+                                .contentShape(Rectangle()) // Adjust hit testing area
                             }
-                            .padding(.leading, 10)
-                            .padding(.trailing, 10)
-                            .background(.tertiary)
-                            .cornerRadius(10)
                             
                         }
                         .padding(.top, 3)
@@ -97,11 +105,15 @@ struct SettingView: View {
                 }
                 
             }
+            .onAppear {
+                self.dailyTarget = UserDefaults.standard.integer(forKey: "dailyTarget")
+                self.scoreTarget = UserDefaults.standard.integer(forKey: "dailyTarget")
+            }
         }
     }
     func sendFeedback() {
         let email = "codedancoffee@gmail.com"
-        let subject = "Feedback on Math App v1.0" // Replace with your desired subject
+        let subject = "Feedback on Math App v1.0"
         
         if let emailURL = URL(string: "mailto:\(email)?subject=\(subject)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "") {
             UIApplication.shared.open(emailURL)
@@ -118,9 +130,9 @@ struct PremiumBannerView: View {
             Text("Unlock full exercise history, progress analytics and more!")
                 .multilineTextAlignment(.center)
             Text("Learn more")
-                .foregroundColor(.black)
+                .foregroundColor(.primary)
                 .padding()
-                .background(Color(red: 0, green: 0.9, blue: 0))
+                .background(Color(red: 0, green: 0.7, blue: 0))
                 .cornerRadius(10)
         }
         .padding()

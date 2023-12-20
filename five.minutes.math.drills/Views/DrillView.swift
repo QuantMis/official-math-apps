@@ -16,8 +16,7 @@ struct DrillView: View {
     @State private var totalScore:Int = 0
     @State private var todayScore:Int = 0
     @State private var progress:Double = 0
-    private var defaultTarget:Int = 200
-    
+    @State private var defaultTarget:Int = 0
     private var title = "🚀 Arithmetic Drill"
     
     var body: some View {
@@ -39,7 +38,7 @@ struct DrillView: View {
                             Text("\(sessions.count)").font(.title3).foregroundColor(.gray).bold()
                         }
                         Spacer()
-                        CircularProgressView(progress: progress)
+                        CircularProgressView(progress: $progress)
                     }
                     .padding(.top, 10)
                     
@@ -55,18 +54,17 @@ struct DrillView: View {
                             navigationStateManager.selectionPath.append("loading-drill-session")
                         } label: {
                             HStack {
-                                Text("Start Training")
-                                    .font(.headline)
                                 Spacer()
-                                Image(systemName: "chevron.right")
+                                Text("Start Training").font(.title2).bold().foregroundColor(.white)
+                                Spacer()
                             }
-                         
+                            
                         }
-                        .foregroundColor(.green)
-                        
-                    }
+                        .foregroundColor(.primary)
+                    }.listRowBackground(Color.green.opacity(0.8))
+                   
                 }
-             
+                
             }
             .navigationDestination(for: String.self) { textValue in
                 if (textValue == "drill") {
@@ -86,11 +84,12 @@ struct DrillView: View {
             .navigationTitle(title)
         }
         .onAppear {
+            getDailyTarget()
             calculateTotalScore()
             calculateTodayScore()
             calculateProgress()
         }
-       
+        
         
         
         .onDisappear {
@@ -116,15 +115,17 @@ struct DrillView: View {
     func calculateProgress() {
         progress = Double(todayScore) / Double(defaultTarget)
     }
+    
+    func getDailyTarget() {
+        defaultTarget = UserDefaults.standard.integer(forKey: "dailyTarget")
+        
+    }
 }
 
 struct CircularProgressView: View {
-    @State private var progress: CGFloat
-    let maxValue: CGFloat = 1.0
-    init(progress: CGFloat) {
-           self._progress = State(initialValue: progress)
-       }
-
+    @Binding var progress: Double
+    let maxValue: Double = 1.0
+    
     var body: some View {
         VStack {
             ZStack {
@@ -132,13 +133,13 @@ struct CircularProgressView: View {
                     .stroke(lineWidth: 20.0)
                     .opacity(0.3)
                     .foregroundColor(Color.green.opacity(0.8))
-
+                
                 Circle()
                     .trim(from: 0.0, to: progress)
                     .stroke(style: StrokeStyle(lineWidth: 20.0, lineCap: .round, lineJoin: .round))
                     .foregroundColor(Color.green)
                     .rotationEffect(Angle(degrees: 270.0))
-
+                
                 
             }
             .padding(20.0)

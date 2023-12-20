@@ -10,19 +10,32 @@ import SwiftUI
 struct DrillSessionView: View {
     @EnvironmentObject var navigationStateManager: NavigationStateManager
     @EnvironmentObject var sessionStateManager: DrillSessionStateManager
+    @State private var exitSessionConfirmation = false
+    
     var body: some View {
         VStack {
             // MARK: Exit Button
             Button {
-                navigationStateManager.popToRoot()
+                exitSessionConfirmation = true
             } label: {
                 HStack {
-                    Image(systemName: "multiply.circle")
-                    Text("End Session")
+                    Image(systemName: "multiply.circle").foregroundColor(.pink)
+                    Text("End Session").foregroundColor(.pink)
                     Spacer()
                 }
             }
             .buttonStyle(PlainButtonStyle())
+            .alert(isPresented: $exitSessionConfirmation) {
+                Alert(
+                    title: Text("Leave the session?"),
+                    message: Text("Your score will be lost if you leave this session"),
+                    primaryButton: .default(Text("Yes")) {
+                        
+                        navigationStateManager.popToRoot()
+                    },
+                    secondaryButton: .cancel(Text("No"))
+                )
+            }
             
             Spacer()
             
@@ -60,7 +73,7 @@ struct DrillSessionView: View {
         .padding()
         .navigationBarBackButtonHidden(true)
         .toolbar(.hidden, for: .tabBar)
-
+        
     }
     
     func userChooseAnswer(answer: String) {
