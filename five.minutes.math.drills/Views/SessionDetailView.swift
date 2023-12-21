@@ -19,17 +19,12 @@ struct SessionDetailView: View {
                     }
                     Spacer().frame(height: 5)
                     HStack {
-                        VStack(alignment: .leading) {
-                            Text("Score").font(.system(size: 16))
-                            Text("\(nvm.session?.score ?? 0)")
-                                .font(.title3).bold().foregroundColor(.green)
-                        }
-                        Spacer()
-                        VStack(alignment: .leading) {
-                            Text("Time Taken").font(.system(size: 16))
-                            Text("\(nvm.session?.sessionPeriod ?? "")")
-                                .font(.title3).bold().foregroundColor(.green)
-                        }
+                        Image("coin")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                        Text("\(nvm.session?.score ?? 0)")
+                            .font(.title3).bold().foregroundColor(.green)
+                       
                     }
                    
                 }
@@ -49,7 +44,9 @@ struct SessionDetailView: View {
                             }
                             Spacer()
                             if (nvm.questions[index].correct_answer == nvm.questions[index].user_answer) {
-                                Image(systemName: "checkmark").font(.title3).foregroundColor(.green).bold()
+                                Image("coin")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
                                 
                             } else {
                                 Image(systemName: "multiply").font(.title3).foregroundColor(.pink).bold()

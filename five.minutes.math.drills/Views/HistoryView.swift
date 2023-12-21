@@ -31,29 +31,31 @@ struct HistoryView: View {
                             VStack(alignment: .leading) {
                                 HStack {
                                     Text("\(session.startAtWithMinutesFormatted)").font(.caption).foregroundColor(.gray)
-                                    Spacer()
-                                    Image(systemName: "chevron.right").font(.caption).foregroundColor(.gray)
                                     
                                 }
                                 Spacer().frame(height: 5)
                                 HStack {
                                     VStack(alignment: .leading) {
-                                        Text("Score").font(.system(size: 16))
-                                        Text("\(session.score)")
-                                            .font(.title3).bold().foregroundColor(.green)
+                                        HStack {
+                                            Image("coin")
+                                                .resizable()
+                                                .frame(width: 20, height: 20)
+                                            Text("\(session.score)")
+                                                .font(.title3).bold().foregroundColor(.green)
+                                            
+                                        }
                                     }
                                     Spacer()
-                                    VStack(alignment: .leading) {
-                                        Text("Time Taken").font(.system(size: 16))
-                                        Text("\(session.sessionPeriod )")
-                                            .font(.title3).bold().foregroundColor(.green)
-                                    }
+                                    Image(systemName: "chevron.right").font(.headline).foregroundColor(.green)
+                                        
+                                    
                                 }
-                               
+                                
                             }
-                     
+                            
                         }
                         .buttonStyle(PlainButtonStyle())
+                        .contentShape(Rectangle())
                         
                     }
                 }
@@ -65,7 +67,7 @@ struct HistoryView: View {
                 }
                 
             }
-            .navigationTitle("📝 History")
+            .navigationTitle("$ Income")
         }
     }
 }

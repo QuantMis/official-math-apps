@@ -12,13 +12,18 @@ struct ContentView: View {
         TabView {
             DrillView()
                 .tabItem {
-                    Label("Exercise", systemImage: "target")
+                    Label("My Stuff", systemImage: "shippingbox")
                 }
                 
             HistoryView()
                 .tabItem {
-                    Label("History", systemImage: "archivebox.fill")
+                    Label("Income", systemImage: "dollarsign")
                 }
+            HistoryView()
+                .tabItem {
+                    Label("Shops", systemImage: "cart")
+                }
+
             SettingView()
                 .tabItem {
                     Label("Setting", systemImage: "gear")

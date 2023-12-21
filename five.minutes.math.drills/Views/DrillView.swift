@@ -21,51 +21,57 @@ struct DrillView: View {
     
     var body: some View {
         NavigationStack(path: $navigationStateManager.selectionPath) {
-            List {
-                Section(header:
-                            Text("Progress").textCase(nil).font(.title3).bold().foregroundColor(.primary)
-                )
-                {
+            VStack(alignment: .leading) {
+                HStack(alignment: .center) {
                     HStack(alignment: .center) {
-                        VStack(alignment: .leading) {
-                            Text("Today Scores").font(.system(size: 16))
-                            Text("\(todayScore)/\(defaultTarget)").font(.title3).foregroundColor(.green).bold()
-                            Spacer().frame(height: 5)
-                            Text("Total Scores").font(.system(size: 16))
-                            Text("\(totalScore)").font(.title3).foregroundColor(.gray).bold()
-                            Spacer().frame(height: 5)
-                            Text("Sessions").font(.system(size: 16))
-                            Text("\(sessions.count)").font(.title3).foregroundColor(.gray).bold()
-                        }
-                        Spacer()
-                        CircularProgressView(progress: $progress)
-                    }
-                    .padding(.top, 10)
-                    
-                }
-                Section(header:
-                            
-                            Text("Exercise").textCase(nil).font(.title3).bold().foregroundColor(.primary)
+                        Image("coin")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                        Text("\(totalScore)").font(.largeTitle).foregroundColor(.secondary).bold()
                         
-                )
-                {
-                    VStack(alignment: .leading, spacing: 10) {
-                        Button {
-                            navigationStateManager.selectionPath.append("loading-drill-session")
-                        } label: {
-                            HStack {
-                                Spacer()
-                                Text("Start Training").font(.title2).bold().foregroundColor(.white)
-                                Spacer()
-                            }
-                            
-                        }
-                        .foregroundColor(.primary)
-                    }.listRowBackground(Color.green.opacity(0.8))
-                   
+                    }
+                    Spacer()
                 }
-                
+                HStack {
+                    Text("My Stuffs").font(.title3).bold()
+                    Image("cubes")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                    Spacer()
+                    HStack {
+                        Text("Shop").font(.title3)
+                            .fontWeight(.semibold)
+                        Image("online-shopping")
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                    }
+                }
+                Spacer()
+                HStack(alignment: .center) {
+                    Spacer()
+                    Text("You don't have any stuffs yet. Earn coins and buy item at shop").font(.title).foregroundColor(.secondary).multilineTextAlignment(.center)
+                    Spacer()
+                }
+                Spacer()
+                VStack(alignment: .leading, spacing: 10) {
+                    Button {
+                        navigationStateManager.selectionPath.append("loading-drill-session")
+                    } label: {
+                        HStack {
+                            Spacer()
+                            Text("Earn Coins").font(.title2).bold().foregroundColor(.white)
+                            Spacer()
+                        }
+                        
+                    }
+                    .foregroundColor(.primary)
+                }
+                .padding()
+                .background(.green)
+                .cornerRadius(20)
+                Spacer().frame(height: 20)
             }
+            .padding()
             .navigationDestination(for: String.self) { textValue in
                 if (textValue == "drill") {
                     DrillView()
@@ -81,7 +87,6 @@ struct DrillView: View {
                 }
                 
             }
-            .navigationTitle(title)
         }
         .onAppear {
             getDailyTarget()

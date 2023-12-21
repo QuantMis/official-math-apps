@@ -22,40 +22,7 @@ struct SettingView: View {
                 Spacer()
                 List {
                     //MARK: Main Settings
-                    Section(header: Text("Main Setting")) {
-                        HStack {
-                            Text("Daily Score Target: \(scoreTarget)")
-                            Spacer()
-                            HStack {
-                                Button(action: {
-                                    scoreTarget += 10
-                                    dailyTarget += 10
-                                }) {
-                                    Image(systemName: "chevron.up")
-                                }
-                                .buttonStyle(.plain)
-                                .contentShape(Rectangle()) // Adjust hit testing area
-
-                                Spacer().frame(width: 10)
-
-                                Divider()
-
-                                Spacer().frame(width: 10)
-
-                                Button(action: {
-                                    scoreTarget -= 10
-                                    dailyTarget -= 10
-                                }) {
-                                    Image(systemName: "chevron.down")
-                                }
-                                .buttonStyle(.plain)
-                                .contentShape(Rectangle()) // Adjust hit testing area
-                            }
-                            
-                        }
-                        .padding(.top, 3)
-                        .padding(.bottom, 3)
-                        
+                    Section(header: Text("Change Language")) {
                         HStack {
                             Text("Language")
                             Spacer()
