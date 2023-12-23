@@ -11,6 +11,8 @@ struct DrillSessionView: View {
     @EnvironmentObject var navigationStateManager: NavigationStateManager
     @EnvironmentObject var sessionStateManager: DrillSessionStateManager
     @State private var exitSessionConfirmation = false
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(fetchRequest: Wallet.all()) private var wallets
     
     var body: some View {
         VStack {
@@ -84,10 +86,22 @@ struct DrillSessionView: View {
             }
         } else {
             sessionStateManager.finishedSession()
+            updateWallet()
             navigationStateManager.session = sessionStateManager.session
             navigationStateManager.questions = sessionStateManager.questions
             navigationStateManager.selectionPath.append("session-detail")
         }
+    }
+    
+    func updateWallet() {
+        viewContext.perform {
+            wallets.first?.coins += sessionStateManager.session?.score ?? 0
+            do {
+                try viewContext.save()
+            } catch {
+            }
+        }
+        
     }
 }
 

@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct SettingView: View {
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
     @EnvironmentObject var navigationStateManager: NavigationStateManager
     @State private var scoreTarget:Int = 0;
     @AppStorage("dailyTarget") private var dailyTarget: Int = 0
     init() {
-      
+        
     }
     
     var body: some View {
@@ -24,9 +26,32 @@ struct SettingView: View {
                     //MARK: Main Settings
                     Section(header: Text("Change Language")) {
                         HStack {
-                            Text("Language")
+                            Text(languageFormatted(_:language.rawValue))
                             Spacer()
-                            Text("English")
+                            Menu {
+                                Button {
+                                    LocalizationService.shared.language = .english_us
+                                } label: {
+                                    Text("English (US)")
+                                }
+                                Button {
+                                    LocalizationService.shared.language = .chinese_simplified
+                                } label: {
+                                    Text("Chinese (Simplified)")
+                                }
+                                Button {
+                                    LocalizationService.shared.language = .japanese
+                                } label: {
+                                    Text("Japanese")
+                                }
+                                Button {
+                                    LocalizationService.shared.language = .deutsch
+                                } label: {
+                                    Text("German")
+                                }
+                            } label: {
+                                Text(countryCodeToFlagEmoji(_: language.rawValue))
+                            }
                         }
                     }
                     
@@ -86,6 +111,32 @@ struct SettingView: View {
             UIApplication.shared.open(emailURL)
         }
     }
+    func countryCodeToFlagEmoji(_ language: String) -> String {
+        switch language {
+        case "en":
+            return "🇺🇸"
+        case "de":
+            return "🇩🇪"
+        case "ja":
+            return "🇯🇵"
+        default:
+            return "🇨🇳"
+        }
+    }
+    
+    func languageFormatted(_ language: String) -> String {
+        switch language {
+        case "en":
+            return "English (US)"
+        case "de":
+            return "German"
+        case "ja":
+            return "Japanese"
+        default:
+            return "Chinese (Simplified)"
+        }
+    }
+    
 }
 struct PremiumBannerView: View {
     var body: some View {

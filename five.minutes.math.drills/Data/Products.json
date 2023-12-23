@@ -1,0 +1,317 @@
+[
+    {
+        "name":"chinese-cat-in-samurai-suit",
+        "image":"chinese-cat-in-samurai-suit",
+        "price":50,
+        "category":"1",
+        "unlocked": false
+    },
+    {
+        "name":"ronin-red-samurai-suits",
+        "image":"ronin-red-samurai-suits",
+        "price":50,
+        "category":"1",
+        "unlocked": false
+    },
+    {
+        "name":"ronin-black-samurai-suits",
+        "image":"ronin-black-samurai-suits",
+        "price":50,
+        "category":"1",
+        "unlocked": false
+    },
+    {
+        "name":"samurai-themed-kubricks-samurai-suits",
+        "image":"samurai-themed-kubricks-samurai-suits",
+        "price":50,
+        "category":"1",
+        "unlocked": false
+    },
+    {
+        "name":"sengoku-basara-nendoroids-samurai-suits",
+        "image":"sengoku-basara-nendoroids-samurai-suits",
+        "price":50,
+        "category":"1",
+        "unlocked": false
+    },
+    {
+        "name":"soul-of-chogokin-samurai-gold-suits",
+        "image":"soul-of-chogokin-samurai-gold-suits",
+        "price":50,
+        "category":"1",
+        "unlocked": false
+    },
+    {
+        "name":"soul-of-chogokin-samurai-suits",
+        "image":"soul-of-chogokin-samurai-suits",
+        "price":50,
+        "category":"1",
+        "unlocked": false
+    },
+    {
+        "name":"tamashii-nations-figuarts-samurai-suit",
+        "image":"tamashii-nations-figuarts-samurai-suit",
+        "price":50,
+        "category":"1",
+        "unlocked": false
+    },
+    {
+        "name":"tamashii-nations-figuarts-samurai-suits",
+        "image":"tamashii-nations-figuarts-samurai-suits",
+        "price":50,
+        "category":"1",
+        "unlocked": false
+    },
+    {
+        "name":"backpack",
+        "image":"backpack",
+        "price":100,
+        "category":"2",
+        "unlocked": false
+    },
+    {
+        "name": "bbq-grill",
+        "image": "bbq-grill",
+        "price": 100,
+        "category": "2",
+        "unlocked": false
+    },
+    {
+        "name": "camping-chair",
+        "image": "camping-chair",
+        "price": 100,
+        "category": "2",
+        "unlocked": false
+    },
+    {
+        "name": "camping-lantern",
+        "image": "camping-lantern",
+        "price": 100,
+        "category": "2",
+        "unlocked": false
+    },
+    {
+        "name": "camping-tent",
+        "image": "camping-tent",
+        "price": 100,
+        "category": "2",
+        "unlocked": false
+    },
+    {
+        "name": "compass",
+        "image": "compass",
+        "price": 100,
+        "category": "2",
+        "unlocked": false
+    },
+    {
+        "name": "electric-stove",
+        "image": "electric-stove",
+        "price": 100,
+        "category": "2",
+        "unlocked": false
+    },
+    {
+        "name": "flashlight",
+        "image": "flashlight",
+        "price": 100,
+        "category": "2",
+        "unlocked": false
+    },
+    {
+        "name": "outdoor-cooking",
+        "image": "outdoor-cooking",
+        "price": 100,
+        "category": "2",
+        "unlocked": false
+    },
+    {
+        "name": "gameboy-icon",
+        "image": "gameboy-icon",
+        "price": 200,
+        "category": "3",
+        "unlocked": false
+    },
+    {
+        "name": "arcade-machine",
+        "image": "arcade-machine",
+        "price": 200,
+        "category": "3",
+        "unlocked": false
+    },
+    {
+        "name": "handheld-console",
+        "image": "handheld-console",
+        "price": 200,
+        "category": "3",
+        "unlocked": false
+    },
+    {
+        "name": "minecraft",
+        "image": "minecraft",
+        "price": 200,
+        "category": "3",
+        "unlocked": false
+    },
+    {
+        "name": "steering",
+        "image": "steering",
+        "price": 200,
+        "category": "3",
+        "unlocked": false
+    },
+    {
+        "name": "tamagotchi",
+        "image": "tamagotchi",
+        "price": 200,
+        "category": "3",
+        "unlocked": false
+    },
+    {
+        "name": "pokeball",
+        "image": "pokeball",
+        "price": 200,
+        "category": "3",
+        "unlocked": false
+    },
+    {
+        "name": "vr-gaming",
+        "image": "vr-gaming",
+        "price": 200,
+        "category": "3",
+        "unlocked": false
+    },
+    {
+        "name": "controller",
+        "image": "controller",
+        "price": 200,
+        "category": "3",
+        "unlocked": false
+    },
+    {
+        "name": "badminton-racket",
+        "image": "badminton-racket",
+        "price": 350,
+        "category": "4",
+        "unlocked": false
+    },
+    {
+        "name": "baseball-bat",
+        "image": "baseball-bat",
+        "price": 350,
+        "category": "4",
+        "unlocked": false
+    },
+    {
+        "name": "basketball",
+        "image": "basketball",
+        "price": 350,
+        "category": "4",
+        "unlocked": false
+    },
+    {
+        "name": "basketball-ring",
+        "image": "basketball-ring",
+        "price": 350,
+        "category": "4",
+        "unlocked": false
+    },
+    {
+        "name": "boxing-gloves",
+        "image": "boxing-gloves",
+        "price": 350,
+        "category": "4",
+        "unlocked": false
+    },
+    {
+        "name": "boxing-ring",
+        "image": "boxing-ring",
+        "price": 350,
+        "category": "4",
+        "unlocked": false
+    },
+    {
+        "name": "rugby-helmet",
+        "image": "rugby-helmet",
+        "price": 350,
+        "category": "4",
+        "unlocked": false
+    },
+    {
+        "name": "sport-target",
+        "image": "sport-target",
+        "price": 350,
+        "category": "4",
+        "unlocked": false
+    },
+    {
+        "name": "sport-podium",
+        "image": "sport-podium",
+        "price": 350,
+        "category": "4",
+        "unlocked": false
+    },
+    {
+        "name": "sun",
+        "image": "sun",
+        "price": 500,
+        "category": "5",
+        "unlocked": false
+    },
+    {
+        "name": "star",
+        "image": "star",
+        "price": 500,
+        "category": "5",
+        "unlocked": false
+    },
+    {
+        "name": "ufo",
+        "image": "ufo",
+        "price": 500,
+        "category": "5",
+        "unlocked": false
+    },
+    {
+        "name": "space-shuttle",
+        "image": "space-shuttle",
+        "price": 500,
+        "category": "5",
+        "unlocked": false
+    },
+    {
+        "name": "space-rover",
+        "image": "space-rover",
+        "price": 500,
+        "category": "5",
+        "unlocked": false
+    },
+    {
+        "name": "observatory",
+        "image": "observatory",
+        "price": 500,
+        "category": "5",
+        "unlocked": false
+    },
+    {
+        "name": "asteroid",
+        "image": "asteroid",
+        "price": 500,
+        "category": "5",
+        "unlocked": false
+    },
+    {
+        "name": "robot",
+        "image": "robot",
+        "price": 500,
+        "category": "5",
+        "unlocked": false
+    },
+    {
+        "name": "astronaut",
+        "image": "astronaut",
+        "price": 500,
+        "category": "5",
+        "unlocked": false
+    }
+]

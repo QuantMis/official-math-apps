@@ -12,21 +12,16 @@ struct ContentView: View {
         TabView {
             DrillView()
                 .tabItem {
-                    Label("My Stuff", systemImage: "shippingbox")
+                    Label("Stickers", systemImage: "paintpalette")
                 }
                 
             HistoryView()
                 .tabItem {
-                    Label("Income", systemImage: "dollarsign")
+                    Label("Coins", systemImage: "centsign.circle.fill")
                 }
-            HistoryView()
-                .tabItem {
-                    Label("Shops", systemImage: "cart")
-                }
-
             SettingView()
                 .tabItem {
-                    Label("Setting", systemImage: "gear")
+                    Label("Settings", systemImage: "gearshape.fill")
                 }
         }.accentColor(.green)
         

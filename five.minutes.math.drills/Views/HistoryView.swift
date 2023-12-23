@@ -37,11 +37,11 @@ struct HistoryView: View {
                                 HStack {
                                     VStack(alignment: .leading) {
                                         HStack {
+                                            Text("+ \(session.score)")
+                                                .font(.title3).bold().foregroundColor(.green)
                                             Image("coin")
                                                 .resizable()
                                                 .frame(width: 20, height: 20)
-                                            Text("\(session.score)")
-                                                .font(.title3).bold().foregroundColor(.green)
                                             
                                         }
                                     }
@@ -67,7 +67,7 @@ struct HistoryView: View {
                 }
                 
             }
-            .navigationTitle("$ Income")
+            .navigationTitle("$ Coins")
         }
     }
 }

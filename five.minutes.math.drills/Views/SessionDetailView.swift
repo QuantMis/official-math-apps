@@ -19,11 +19,11 @@ struct SessionDetailView: View {
                     }
                     Spacer().frame(height: 5)
                     HStack {
+                        Text("+ \(nvm.session?.score ?? 0)")
+                            .font(.title3).bold().foregroundColor(.green)
                         Image("coin")
                             .resizable()
                             .frame(width: 20, height: 20)
-                        Text("\(nvm.session?.score ?? 0)")
-                            .font(.title3).bold().foregroundColor(.green)
                        
                     }
                    
