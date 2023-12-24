@@ -5,4 +5,56 @@
   Created by Quantmis on 23/12/2023.
   
 */
-"play" = "遊ぶ";
+// Navigation
+"back" = "戻る";
+
+// TabBar
+"stickers" = "ステッカー";
+"coins" = "コイン";
+"settings" = "設定";
+
+// OnBoardingView
+"select_language" = "言語を選択してください！";
+"continue" = "続行";
+
+// DrillView
+"play" = "再生";
+"my_stickers" = "マイステッカー";
+"get_coins" = "コインを取得";
+"samurai_cats" = "サムライキャッツ";
+"outdoor_camping" = "アウトドアキャンプ";
+"gaming" = "ゲーム";
+"sports" = "スポーツ";
+"outer_space" = "宇宙";
+
+// HistoryView
+"no_coins_yet" = "まだコインはありません";
+
+// LoadingView
+"loading" = "質問の準備中";
+
+// DrillSessionView
+"exit" = "終了";
+"leave" = "このセッションを終了しますか？";
+"leave_confirm" = "このセッションを終了すると、得点が失われます";
+
+// ShopView
+"purchase" = "このステッカーを購入しますか？";
+"yes" = "はい";
+"no" = "いいえ";
+"not_enough_coin" = "コインが足りません";
+
+
+// SessionDetailView
+"result" = "結果";
+
+// SettingView
+"thank_you_title" = "MathGOを選んでいただきありがとうございます！";
+"thank_you_sub" = "MathGoをご利用いただきありがとうございます。お時間があれば、私たちを評価していただけませんか？";
+"rate_us" = "評価する";
+"change_language" = "言語を変更する";
+"support" = "サポートとリソース";
+"feedback" = "フィードバック";
+"rate_on_appstore" = "🙏 AppStoreでアプリを評価する";
+"version" = "バージョン 1.0.0";
+"made_with" = "❤️ で作成されました";

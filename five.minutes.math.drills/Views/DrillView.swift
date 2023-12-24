@@ -29,29 +29,24 @@ struct DrillView: View {
         self.context = provider.newContext
     }
     
-    private var title = "🚀 Arithmetic Drill"
-    
     var body: some View {
         NavigationStack(path: $navigationStateManager.selectionPath) {
             VStack(alignment: .leading) {
-                //MARK: My Coins
-                HStack(alignment: .center) {
-                    HStack(alignment: .center) {
-                        Image("coin")
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                        Text("\(wallets.first?.coins ?? 0)").font(.largeTitle).foregroundColor(.secondary).bold()
-                        
-                    }
-                    Spacer()
-                }
-                
                 //MARK: My Stickers
                 HStack {
-                    Text("My Stickers").font(.title2).bold()
+                    Text("my_stickers".localized(language))
+                        .font(.title2).bold()
                     Image("sticky-notes")
                         .resizable()
                         .frame(width: 25, height: 25)
+                    Spacer()
+                    HStack(alignment: .center) {
+                        Image("coin")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                        Text("\(wallets.first?.coins ?? 0)").font(.title2).foregroundColor(.secondary).bold()
+                        
+                    }
                 }
                 LazyVGrid(columns: Array(repeating: GridItem(), count: 2), spacing: 10) {
                     ForEach(stickersCategory, id: \.self) { category in
@@ -61,20 +56,19 @@ struct DrillView: View {
                                 Spacer()
                                 Image(systemName: "chevron.right").font(.caption)
                             }
-                            Spacer().frame(height: 20)
-                            
-                            LazyVGrid(columns: Array(repeating: GridItem(), count: 5), spacing: 10) {
+                            Spacer().frame(height: 5)
+                            LazyVGrid(columns: Array(repeating: GridItem(), count: 3), spacing: 10) {
                                 ForEach(getStickersbyCategory(category: category)) { sticker in
                                     if (sticker.unlocked) {
                                         
                                     Image(sticker.image ?? "")
                                         .resizable()
-                                        .frame(width: 25, height: 25)
+                                        .frame(width: 30, height: 30)
                                         
                                     } else {
                                      Image(sticker.image ?? "")
                                         .resizable()
-                                        .frame(width: 25, height: 25).opacity(0.4)
+                                        .frame(width: 30, height: 30).opacity(0.4)
        
                                     }
                                 }
@@ -105,7 +99,8 @@ struct DrillView: View {
                     } label: {
                         HStack {
                             Spacer()
-                            Text("Get Coins").font(.title).bold()
+                            Text("get_coins".localized(language))
+                                .font(.title).bold()
                             Image("mathematical-sign")
                                 .resizable()
                                 .frame(width: 25, height: 25)
@@ -120,7 +115,6 @@ struct DrillView: View {
                 .cornerRadius(25)
                 Spacer().frame(height: 25)
                 
-                Spacer()
             }
             .padding()
             .navigationDestination(for: String.self) { textValue in
@@ -154,17 +148,17 @@ struct DrillView: View {
     func getTitlebyCategory(category:String) -> String {
         switch category {
         case "1":
-            return "Cats in Samurai Suits"
+            return "samurai_cats".localized(language)
         case "2":
-            return "Outdoor Camping"
+            return "outdoor_camping".localized(language)
         case "3":
-            return "Gaming All Day"
+            return "gaming".localized(language)
         case "4":
-            return "Sports for Fitness"
+            return "sports".localized(language)
         case "5":
-            return "Exploring Outer Space"
+            return "outer_space".localized(language)
         default:
-            return "Cats in Samurai Suits"
+            return "samurai_cats".localized(language)
         }
     }
     
@@ -192,7 +186,7 @@ struct DrillView: View {
     
     func initializeWallet() {
         let newWallet:Wallet = Wallet(context: context)
-        newWallet.coins = 50
+        newWallet.coins = 10
         do {
             try context.save()
         } catch {

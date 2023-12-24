@@ -5,4 +5,61 @@
   Created by Quantmis on 23/12/2023.
   
 */
+
+
+// Navigation
+"back" = "Back";
+
+// TabBar
+"stickers" = "Stickers";
+"coins" = "Coins";
+"settings" = "Settings";
+
+// OnBoardingView
+"select_language" = "Select you language!";
+"continue" = "Continue";
+
+// DrillView
 "play" = "Play";
+"my_stickers" = "My Stickers";
+"get_coins" = "Get Coins";
+"samurai_cats" = "Samurai Cats";
+"outdoor_camping" = "Outdoor Camping";
+"gaming" = "Gaming";
+"sports" = "Sports";
+"outer_space" = "Outer Space";
+
+// HistoryView
+"no_coins_yet" = "No coins yet";
+
+// LoadingView
+"loading" = "Preparing Question";
+
+// DrillSessionView
+"exit" = "Exit";
+"leave" = "Leave this session?";
+"leave_confirm" = "Your score will be lost if you leave this session";
+
+// ShopView
+"purchase" = "Purchase this sticker?";
+"yes" = "Yes";
+"no" = "No";
+"not_enough_coin" = "You don't have enough coin";
+
+
+// SessionDetailView
+"result" = "Result";
+
+// SettingView
+"thank_you_title" = "Thank You for Choosing MathGO!";
+"thank_you_sub" = "If you love using MathGo, would you mind taking a moment to rate us?";
+"rate_us" = "Rate Us";
+"change_language" = "Change Language";
+"change_language" = "Change Language";
+"support" = "Support and Resources";
+"feedback" = "Feedback";
+"rate_on_appstore" = "🙏 Rate the App on AppStore";
+"version" = "Version 1.0.0";
+"made_with" = "Made with ❤️";
+
+

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SessionDetailView: View {
     @EnvironmentObject var nvm: NavigationStateManager
+    private var language = LocalizationService.shared.language
     
     var body: some View {
         List {
@@ -60,7 +61,8 @@ struct SessionDetailView: View {
                 
             }
         }
-        .navigationTitle("🎯 Result")
+//        .navigationTitle("🎯 Result")
+        .navigationTitle("result".localized(language))
         .navigationBarBackButtonHidden(true)
         .toolbar(.hidden, for: .tabBar)
         .toolbar {
@@ -69,10 +71,9 @@ struct SessionDetailView: View {
                     nvm.popToRoot()
                 }) {
                     Image(systemName: "chevron.left")
-                    Text("Back")
+                    Text("back".localized(language))
                 }
             }
-            
         }
     }
 }

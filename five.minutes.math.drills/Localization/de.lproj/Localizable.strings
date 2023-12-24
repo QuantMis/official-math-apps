@@ -5,4 +5,55 @@
   Created by Quantmis on 23/12/2023.
   
 */
-"play" = "spielen";
+// Navigation
+"back" = "Zurück";
+
+// TabBar
+"stickers" = "Aufkleber";
+"coins" = "Münzen";
+"settings" = "Einstellungen";
+
+// OnBoardingView
+"select_language" = "Wählen Sie Ihre Sprache!";
+"continue" = "Fortsetzen";
+
+// DrillView
+"play" = "Spielen";
+"my_stickers" = "Meine Aufkleber";
+"get_coins" = "Münzen erhalten";
+"samurai_cats" = "Samurai-Katzen";
+"outdoor_camping" = "Outdoor-Camping";
+"gaming" = "Spielen";
+"sports" = "Sport";
+"outer_space" = "Weltraum";
+
+// HistoryView
+"no_coins_yet" = "Noch keine Münzen";
+
+// LoadingView
+"loading" = "Frage vorbereiten";
+
+// DrillSessionView
+"exit" = "Beenden";
+"leave" = "Diese Sitzung verlassen?";
+"leave_confirm" = "Ihr Punktestand geht verloren, wenn Sie diese Sitzung verlassen";
+"not_enough_coin" = "Sie haben nicht genug Münzen";
+
+// ShopView
+"purchase" = "Diesen Aufkleber kaufen?";
+"yes" = "Ja";
+"no" = "Nein";
+
+// SessionDetailView
+"result" = "Ergebnis";
+
+// SettingView
+"thank_you_title" = "Vielen Dank, dass Sie sich für MathGO entschieden haben!";
+"thank_you_sub" = "Wenn Ihnen die Verwendung von MathGo gefällt, würden Sie sich einen Moment Zeit nehmen, um uns zu bewerten?";
+"rate_us" = "Bewerten Sie uns";
+"change_language" = "Sprache ändern";
+"support" = "Unterstützung und Ressourcen";
+"feedback" = "Feedback";
+"rate_on_appstore" = "🙏 Bewerten Sie die App im AppStore";
+"version" = "Version 1.0.0";
+"made_with" = "Hergestellt mit ❤️";

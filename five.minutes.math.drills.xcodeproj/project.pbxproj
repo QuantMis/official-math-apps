@@ -24,6 +24,7 @@
 		AF59B8872B3733FB007F8A5E /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59B8862B3733FB007F8A5E /* Language.swift */; };
 		AF59B8892B373494007F8A5E /* Strings+localisations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59B8882B373494007F8A5E /* Strings+localisations.swift */; };
 		AF59B88B2B3734D5007F8A5E /* LocalizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59B88A2B3734D5007F8A5E /* LocalizationService.swift */; };
+		AF59B8912B387E15007F8A5E /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF59B8902B387E15007F8A5E /* OnBoardingView.swift */; };
 		AF958C922B23719500517454 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF958C912B23719500517454 /* Utils.swift */; };
 		AF980A5A2B0FA9EE00AA71E4 /* five_minutes_math_drillsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF980A592B0FA9EE00AA71E4 /* five_minutes_math_drillsApp.swift */; };
 		AF980A5C2B0FA9EE00AA71E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF980A5B2B0FA9EE00AA71E4 /* ContentView.swift */; };
@@ -65,6 +66,7 @@
 		AF59B8862B3733FB007F8A5E /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		AF59B8882B373494007F8A5E /* Strings+localisations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+localisations.swift"; sourceTree = "<group>"; };
 		AF59B88A2B3734D5007F8A5E /* LocalizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationService.swift; sourceTree = "<group>"; };
+		AF59B8902B387E15007F8A5E /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		AF958C912B23719500517454 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		AF980A562B0FA9EE00AA71E4 /* five.minutes.math.drills.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = five.minutes.math.drills.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF980A592B0FA9EE00AA71E4 /* five_minutes_math_drillsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = five_minutes_math_drillsApp.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				AF1700222B29B39E0033EE36 /* HistoryView.swift */,
 				AF59B8602B31E16A007F8A5E /* SettingView.swift */,
 				AF59B86A2B343CDA007F8A5E /* ShopView.swift */,
+				AF59B8902B387E15007F8A5E /* OnBoardingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				AFB271172B11012A00A1234A /* AnswerGenerator.swift in Sources */,
 				AF980A5A2B0FA9EE00AA71E4 /* five_minutes_math_drillsApp.swift in Sources */,
 				AF59B8652B34088B007F8A5E /* Wallet+CoreDataProperties.swift in Sources */,
+				AF59B8912B387E15007F8A5E /* OnBoardingView.swift in Sources */,
 				AF958C922B23719500517454 /* Utils.swift in Sources */,
 				AF59B8892B373494007F8A5E /* Strings+localisations.swift in Sources */,
 				AF59B8752B3447A0007F8A5E /* Stuffs+CoreDataClass.swift in Sources */,

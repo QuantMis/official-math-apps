@@ -10,9 +10,9 @@ import SwiftUI
 struct LoadingView: View {
     @EnvironmentObject var navigationStateManager: NavigationStateManager
     @EnvironmentObject var drillSessionStateManager: DrillSessionStateManager
+    private var language = LocalizationService.shared.language
     @State private var isLoading:Bool = true
-    @State private var title:String = "Preparing Question Data"
-    @State private var countdown:Int = 3
+    @State private var countdown:Int = 1
     
     var body: some View {
         VStack {
@@ -21,7 +21,7 @@ struct LoadingView: View {
                     SpinnerView()
                     Spacer().frame(width: 5)
                 }
-                Text(title)
+                Text("loading".localized(language)).font(.title3)
             }
             if !isLoading {
                 if countdown != 0 {

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DrillSessionView: View {
+    private var language = LocalizationService.shared.language
     @EnvironmentObject var navigationStateManager: NavigationStateManager
     @EnvironmentObject var sessionStateManager: DrillSessionStateManager
     @State private var exitSessionConfirmation = false
@@ -22,20 +23,20 @@ struct DrillSessionView: View {
             } label: {
                 HStack {
                     Image(systemName: "multiply.circle").foregroundColor(.pink)
-                    Text("End Session").foregroundColor(.pink)
+                    Text("exit".localized(language)).foregroundColor(.pink)
                     Spacer()
                 }
             }
             .buttonStyle(PlainButtonStyle())
             .alert(isPresented: $exitSessionConfirmation) {
                 Alert(
-                    title: Text("Leave the session?"),
-                    message: Text("Your score will be lost if you leave this session"),
-                    primaryButton: .default(Text("Yes")) {
-                        
+                    title: Text("leave".localized(language)),
+                    message: Text("leave_confirm".localized(language)),
+                    primaryButton: .default(Text("yes".localized(language))) {
+                        sessionStateManager.session?.managedObjectContext?.rollback()
                         navigationStateManager.popToRoot()
                     },
-                    secondaryButton: .cancel(Text("No"))
+                    secondaryButton: .cancel(Text("no".localized(language)))
                 )
             }
             
@@ -44,7 +45,7 @@ struct DrillSessionView: View {
             // MARK: Question
             VStack {
                 // MARK: Questions Info
-                Text("\(sessionStateManager.getCurrentQuestionIndex()) of \(sessionStateManager.questions.count)").font(.title3)
+                Text("\(sessionStateManager.getCurrentQuestionIndex()) / \(sessionStateManager.questions.count)").font(.title3)
                 Spacer().frame(height: 10)
                 // MARK: Questions
                 Text("\(sessionStateManager.getCurrentQuestion().questions ?? "")")

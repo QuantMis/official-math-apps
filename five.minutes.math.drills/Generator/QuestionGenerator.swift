@@ -210,8 +210,8 @@ func division(context: NSManagedObjectContext) -> [Questions] {
     
     // MARK: Q4
     let q4 = Questions(context: context)
-    let q4deno = Int.random(in: 6...9)
-    let q4nume = q4deno * Int.random(in: 2...5)
+    let q4deno = Int.random(in: 7...12)
+    let q4nume = q4deno * Int.random(in: 7...12)
     let q4ans = q4nume / q4deno
     q4.correct_answer = String(q4ans)
     q4.questions = "\(q4nume) / \(q4deno)"
@@ -219,8 +219,8 @@ func division(context: NSManagedObjectContext) -> [Questions] {
     
     // MARK: Q5
     let q5 = Questions(context: context)
-    let q5deno = Int.random(in: 6...9)
-    let q5nume = q5deno * Int.random(in: 2...5)
+    let q5deno = Int.random(in: 7...12)
+    let q5nume = q5deno * Int.random(in: 7...12)
     let q5ans = q5nume / q5deno
     q5.correct_answer = String(q5ans)
     q5.questions = "\(q5nume) / \(q5deno)"

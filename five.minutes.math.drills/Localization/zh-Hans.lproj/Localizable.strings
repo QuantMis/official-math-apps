@@ -5,4 +5,56 @@
   Created by Quantmis on 23/12/2023.
   
 */
-"play" = "玩";
+
+// Navigation
+"back" = "返回";
+
+// TabBar
+"stickers" = "贴纸";
+"coins" = "金币";
+"settings" = "设置";
+
+// OnBoardingView
+"select_language" = "选择您的语言！";
+"continue" = "继续";
+
+// DrillView
+"play" = "播放";
+"my_stickers" = "我的贴纸";
+"get_coins" = "获取金币";
+"samurai_cats" = "武士猫";
+"outdoor_camping" = "户外露营";
+"gaming" = "游戏";
+"sports" = "运动";
+"outer_space" = "外太空";
+
+// HistoryView
+"no_coins_yet" = "尚未有硬币";
+
+// LoadingView
+"loading" = "准备问题中";
+
+// DrillSessionView
+"exit" = "退出";
+"leave" = "离开这个会话？";
+"leave_confirm" = "如果您离开此会话，您的得分将丢失";
+"not_enough_coin" = "您的硬币不足";
+
+// ShopView
+"purchase" = "购买这个贴纸？";
+"yes" = "是";
+"no" = "否";
+
+// SessionDetailView
+"result" = "结果";
+
+// SettingView
+"thank_you_title" = "感谢您选择MathGO！";
+"thank_you_sub" = "如果您喜欢使用MathGo，请花点时间给我们评分吧？";
+"rate_us" = "给我们评分";
+"change_language" = "更改语言";
+"support" = "支持和资源";
+"feedback" = "反馈";
+"rate_on_appstore" = "🙏 在AppStore上给应用评分";
+"version" = "版本 1.0.0";
+"made_with" = "用 ❤️ 制作";

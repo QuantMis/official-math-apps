@@ -8,23 +8,19 @@
 import SwiftUI
 
 struct SettingView: View {
-    @AppStorage("language")
     private var language = LocalizationService.shared.language
     @EnvironmentObject var navigationStateManager: NavigationStateManager
     @State private var scoreTarget:Int = 0;
     @AppStorage("dailyTarget") private var dailyTarget: Int = 0
-    init() {
-        
-    }
     
     var body: some View {
         NavigationStack(path: $navigationStateManager.selectionPath) {
             VStack {
-                PremiumBannerView()
+                ThankYouBanner()
                 Spacer()
                 List {
                     //MARK: Main Settings
-                    Section(header: Text("Change Language")) {
+                    Section(header: Text("change_language".localized(language))) {
                         HStack {
                             Text(languageFormatted(_:language.rawValue))
                             Spacer()
@@ -56,18 +52,18 @@ struct SettingView: View {
                     }
                     
                     //MARK: Support And Resource
-                    Section(header: Text("Support and Resources")) {
+                    Section(header: Text("support".localized(language))) {
                         Button(action: {
                             sendFeedback()
                         }) {
                             HStack {
                                 Image(systemName: "envelope")
-                                Text("Feedback")
+                                Text("feedback".localized(language))
                             }
                         }
                         Button(action: {}) {
                             HStack {
-                                Text("🙏 Rate the App on AppStore")
+                                Text("rate_on_appstore".localized(language))
                             }
                         }
                     }
@@ -77,7 +73,7 @@ struct SettingView: View {
                         HStack {
                             
                             Spacer()
-                            Text("Version 1.0.0").textCase(nil).font(.subheadline).foregroundColor(.secondary)
+                            Text("version".localized(language)).textCase(nil).font(.subheadline).foregroundColor(.secondary)
                             Spacer()
                             
                         }
@@ -85,7 +81,7 @@ struct SettingView: View {
                         HStack {
                             
                             Spacer()
-                            Text("Made with ❤️").textCase(nil).font(.subheadline).foregroundColor(.secondary)
+                            Text("made_with".localized(language)).textCase(nil).font(.subheadline).foregroundColor(.secondary)
                             Spacer()
                             
                         }
@@ -96,10 +92,6 @@ struct SettingView: View {
                     }
                 }
                 
-            }
-            .onAppear {
-                self.dailyTarget = UserDefaults.standard.integer(forKey: "dailyTarget")
-                self.scoreTarget = UserDefaults.standard.integer(forKey: "dailyTarget")
             }
         }
     }
@@ -138,16 +130,19 @@ struct SettingView: View {
     }
     
 }
-struct PremiumBannerView: View {
+struct ThankYouBanner: View {
+    private var language = LocalizationService.shared.language
     var body: some View {
         VStack(alignment: .center, spacing: 15) {
-            Text("💎 Arithmetic Drill Pro")
-                .font(.title)
+            Text("thank_you_title".localized(language))
+                .font(.title2)
+                .bold()
                 .foregroundColor(.primary)
                 .frame(maxWidth: .infinity)
-            Text("Unlock full exercise history, progress analytics and more!")
                 .multilineTextAlignment(.center)
-            Text("Learn more")
+            Text("thank_you_sub".localized(language))
+                .multilineTextAlignment(.center)
+            Text("rate_us".localized(language))
                 .foregroundColor(.primary)
                 .padding()
                 .background(Color(red: 0, green: 0.7, blue: 0))

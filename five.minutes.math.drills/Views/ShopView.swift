@@ -9,37 +9,49 @@ import SwiftUI
 import CoreData
 
 struct ShopView: View {
+    private var language = LocalizationService.shared.language
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var navigationStateManager: NavigationStateManager
     @FetchRequest(fetchRequest: Wallet.all()) private var wallets
-
+    private var category:String = "1"
+    @State private var showSnackbar = false
+    
     @State private var selectedIndex: Int = 0
     @State private var unlockConfirmation = false
     
     @FetchRequest var stuffs: FetchedResults<Stuffs>
     init(category: String) {
+        self.category = category
         _stuffs = FetchRequest(fetchRequest: Stuffs.byCategory(category: category))
     }
     
     var body: some View {
         
         VStack {
-            HStack(alignment: .center) {
+            HStack {
+                Text(getTitlebyCategory(category:category))
+                    .font(.title2).bold()
+                Spacer()
                 HStack(alignment: .center) {
                     Image("coin")
                         .resizable()
-                        .frame(width: 30, height: 30)
-                    Text("\(wallets.first?.coins ?? 0)").font(.largeTitle).foregroundColor(.secondary).bold()
+                        .frame(width: 25, height: 25)
+                    Text("\(wallets.first?.coins ?? 0)").font(.title2).foregroundColor(.secondary).bold()
                     
                 }
-                Spacer()
+            }
+            .padding(.horizontal, 10)
+            if showSnackbar {
+                SnackbarView(message: "not_enough_coin".localized(language), isPresented: $showSnackbar)
             }
             ScrollView {
                 LazyVGrid(columns: Array(repeating: GridItem(), count: 2), spacing: 10) {
                     ForEach(0..<stuffs.count) { i in
                         Button {
-                            unlockConfirmation = true
-                            selectedIndex = i
+                            if (!stuffs[i].unlocked) {
+                                unlockConfirmation = true
+                                selectedIndex = i
+                            }
                         } label: {
                             VStack {
                                 if (stuffs[i].unlocked) {
@@ -70,9 +82,9 @@ struct ShopView: View {
                         .buttonStyle(PlainButtonStyle())
                         .alert(isPresented: $unlockConfirmation) {
                             Alert(
-                                title: Text(stuffs[selectedIndex].name ?? ""),
-                                message: Text("Purchase this sticker with \(stuffs[selectedIndex].price) coins"),
-                                primaryButton: .default(Text("Yes")) {
+                                title: Text("\(stuffs[selectedIndex].price)"),
+                                message: Text("purchase".localized(language)),
+                                primaryButton: .default(Text("yes".localized(language))) {
                                     let coins = wallets.first?.coins ?? 0
                                     if (coins >= stuffs[selectedIndex].price) {
                                         viewContext.perform {
@@ -84,21 +96,76 @@ struct ShopView: View {
                                             }
                                         }
                                     } else {
+                                        showSnackbar.toggle()
+                                        
                                     }
                                 },
-                                secondaryButton: .cancel(Text("No"))
+                                secondaryButton: .cancel(Text("no".localized(language)))
                             )
                         }
                         
                     }
                 }
-                
+             
+            }
+        }
+        .navigationBarBackButtonHidden(true)
+        .toolbar(.hidden, for: .tabBar)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    navigationStateManager.popToRoot()
+                }) {
+                    Image(systemName: "chevron.left")
+                    Text("back".localized(language))
+                }
             }
         }
         
         
     }
+    func getTitlebyCategory(category:String) -> String {
+        switch category {
+        case "1":
+            return "samurai_cats".localized(language)
+        case "2":
+            return "outdoor_camping".localized(language)
+        case "3":
+            return "gaming".localized(language)
+        case "4":
+            return "sports".localized(language)
+        case "5":
+            return "outer_space".localized(language)
+        default:
+            return "samurai_cats".localized(language)
+        }
+    }
 }
+
+struct SnackbarView: View {
+    let message: String
+    @Binding var isPresented: Bool
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Text(message)
+                    .foregroundColor(.pink)
+                    .cornerRadius(10)
+            }
+            .padding(10)
+            .opacity(isPresented ? 1 : 0)
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                withAnimation {
+                    isPresented = false
+                }
+            }
+        }
+    }
+}
+
 
 #Preview {
     ShopView(category: "1")
