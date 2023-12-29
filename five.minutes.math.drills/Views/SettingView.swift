@@ -61,7 +61,11 @@ struct SettingView: View {
                                 Text("feedback".localized(language))
                             }
                         }
-                        Button(action: {}) {
+                        Button(action: {
+                            if let url = URL(string: "https://apps.apple.com/us/app/math-go-fun-way-to-learn-math/id6475046118") {
+                                UIApplication.shared.open(url)
+                            }
+                        }) {
                             HStack {
                                 Text("rate_on_appstore".localized(language))
                             }
@@ -142,11 +146,19 @@ struct ThankYouBanner: View {
                 .multilineTextAlignment(.center)
             Text("thank_you_sub".localized(language))
                 .multilineTextAlignment(.center)
-            Text("rate_us".localized(language))
-                .foregroundColor(.primary)
-                .padding()
-                .background(Color(red: 0, green: 0.7, blue: 0))
-                .cornerRadius(10)
+          
+            Button(action: {
+                if let url = URL(string: "https://apps.apple.com/us/app/math-go-fun-way-to-learn-math/id6475046118") {
+                    UIApplication.shared.open(url)
+                }
+            }) {
+                Text("rate_us".localized(language))
+                    .foregroundColor(.primary)
+                    .padding()
+                    .background(Color(red: 0, green: 0.7, blue: 0))
+                    .cornerRadius(10)
+            }
+            
         }
         .padding()
         .background(.green)

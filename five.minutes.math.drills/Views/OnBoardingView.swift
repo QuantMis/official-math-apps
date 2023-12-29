@@ -14,7 +14,7 @@ struct OnBoardingView: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
-            Image("visualizing-mathematics").resizable().frame(width: 300, height: 300)
+            Image("student-with-a-math").resizable().frame(width: 300, height: 300)
             HStack {
                 Text("Math GO").font(.largeTitle).bold()
                 Spacer()
@@ -58,6 +58,7 @@ struct OnBoardingView: View {
                     Text("continue".localized(language)).font(.title).bold()
                     Spacer()
                 }
+                .contentShape(Rectangle())
             })
             .buttonStyle(PlainButtonStyle())
             .padding()
